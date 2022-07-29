@@ -1,0 +1,62 @@
+/* Universal Styles */
+body {
+  background: hsl(222, 26%, 31%);
+  color: hsl(0, 0%, 100%);
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+#theme-div {
+  display: flex;
+}
+
+#theme-div > span {
+  font-size: .75rem;
+  align-self: end;
+  padding: 0 1rem .3rem 0;
+  text-transform: uppercase;
+}
+
+#theme-selector {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+#theme-selector > span {
+  flex: 3;
+}
+
+#theme-selector > div {
+  flex: 1 100%;
+  padding: .75rem 2rem;
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 500px;
+  position: relative;
+}
+
+#theme-selector > div > span {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: hsl(6, 63%, 50%);
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 8px;
+}
+
+/* Main */
