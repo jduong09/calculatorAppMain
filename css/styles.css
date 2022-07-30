@@ -12,7 +12,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 2rem 1rem;
+  padding: 0 1rem;
+  margin: 2rem 0;
 }
 
 h1 {
@@ -58,5 +59,65 @@ h1 {
   top: 4px;
   left: 8px;
 }
-
 /* Main */
+main {
+  padding: 0 1rem;
+}
+
+#calculator-result {
+  width: 100%;
+  padding: 1rem;
+  text-align: end;
+  background-color: hsl(224, 36%, 15%);
+  border-radius: 10px;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+#calculator-keypad {
+  background-color: hsl(223, 31%, 20%);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+#calculator-keys-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(5, auto);
+  text-align: center;
+  gap: 1rem;
+}
+
+.calculator-key {
+  display: inline-grid;
+  height: 100%;
+  padding: 1rem;
+  background-color: hsl(30, 25%, 89%);
+  color: hsl(221, 14%, 31%);
+  border-radius: 5px;
+  font-size: 2rem;
+  align-content: center;
+  box-shadow: 0 .25rem hsl(28, 16%, 65%);
+  cursor: pointer;
+}
+
+#delete-key, #reset-key {
+  background-color: hsl(225, 21%, 49%);
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  box-shadow: 0 0.25rem hsl(224deg 28% 35%);
+}
+
+#reset-key {
+  grid-column: 1 / 3;
+}
+
+#enter-key {
+  background-color: hsl(6, 63%, 50%);
+  color: hsl(0, 0%, 100%);
+  grid-column: 3 / 5;
+  box-shadow: 0 0.25rem hsl(6, 70%, 34%);
+}
+#delete-key, #reset-key, #enter-key {
+  font-size: 1.25rem;
+}
