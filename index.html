@@ -10,10 +10,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="./js/theme.js"></script>
   <title>Frontend Mentor | Calculator app</title>
 </head>
-<body>
-  <header>
+<body class="theme-1">
+  <header class="theme-1">
     <h1>calc</h1>
     <div id="theme-div">
       <span>theme</span>
@@ -22,15 +23,17 @@
         <span>2</span>
         <span>3</span>
         <div>
-          <span></span>
+          <span id="theme-1" class="theme-toggle-btn toggled"></span>
+          <span id="theme-2" class="theme-toggle-btn hide"></span>
+          <span id="theme-3" class="theme-toggle-btn hide"></span>
         </div>
       </div>
     </div>
   </header>
-  <main>
+  <main class="theme-1">
     <div id="calculator-result">399,981</div>
     <div id="calculator-keypad">
-      <ul id="calculator-keys-list">
+      <ul id="calculator-keys-list" class="theme-1">
         <li class="calculator-key">7</li>
         <li class="calculator-key">8</li>
         <li class="calculator-key">9</li>

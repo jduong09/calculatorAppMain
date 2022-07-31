@@ -1,10 +1,12 @@
 /* Universal Styles */
 body {
-  background: hsl(222, 26%, 31%);
-  color: hsl(0, 0%, 100%);
   font-family: 'League Spartan', sans-serif;
   font-weight: 700;
   font-size: 1rem;
+}
+
+.hide {
+  background: transparent !important;
 }
 
 /* Header */
@@ -44,12 +46,11 @@ h1 {
 #theme-selector > div {
   flex: 1 100%;
   padding: .75rem 2rem;
-  background-color: hsl(223, 31%, 20%);
   border-radius: 500px;
   position: relative;
 }
 
-#theme-selector > div > span {
+.theme-toggle-btn {
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -58,6 +59,22 @@ h1 {
   position: absolute;
   top: 4px;
   left: 8px;
+}
+
+#theme-1.theme-toggle-btn {
+  top: 4px;
+  left: 8px;
+}
+
+#theme-2.theme-toggle-btn {
+  top: 4px;
+  left: 36px;
+}
+
+#theme-3.theme-toggle-btn {
+  top: 4px;
+  right: 8px;
+  left: initial;
 }
 /* Main */
 main {
@@ -68,14 +85,12 @@ main {
   width: 100%;
   padding: 1rem;
   text-align: end;
-  background-color: hsl(224, 36%, 15%);
   border-radius: 10px;
   font-size: 2rem;
   margin: 1rem 0;
 }
 
 #calculator-keypad {
-  background-color: hsl(223, 31%, 20%);
   padding: 1rem;
   border-radius: 10px;
 }
@@ -120,4 +135,90 @@ main {
 }
 #delete-key, #reset-key, #enter-key {
   font-size: 1.25rem;
+}
+
+/* Theme-1 */
+body.theme-1 {
+  background: hsl(222, 26%, 31%);
+  color: hsl(0, 0%, 100%);
+}
+
+header.theme-1 > #theme-div > #theme-selector > div, main.theme-1 > #calculator-keypad {
+  background-color: hsl(223, 31%, 20%);
+}
+
+main.theme-1 > #calculator-result {
+  background-color: hsl(224, 36%, 15%)
+}
+
+/* Theme-2 */
+body.theme-2 {
+  background: hsl(0, 0%, 90%);
+  color: hsl(60, 10%, 19%);
+}
+
+header.theme-2 > #theme-div > #theme-selector > div, main.theme-2 > #calculator-keypad  {
+  background-color: hsl(0, 5%, 81%);
+}
+
+header.theme-2 > #theme-div > #theme-selector > div > .theme-toggle-btn {
+  background-color: hsl(25, 98%, 40%);
+}
+
+main.theme-2 > #calculator-result {
+  background-color: hsl(0, 0%, 93%);
+}
+
+main.theme-2 > #calculator-keypad > #calculator-keys-list > .calculator-key {
+  color: hsl(60, 10%, 19%);
+  background-color: hsl(45, 7%, 89%);
+  box-shadow: 0 0.25rem hsl(35, 11%, 61%);
+}
+
+main.theme-2 > #calculator-keypad > #calculator-keys-list > #enter-key, main.theme-2 > #calculator-keypad > #calculator-keys-list > #delete-key, main.theme-2 > #calculator-keypad > #calculator-keys-list > #reset-key {
+  color: hsl(0, 0%, 100%);
+}
+
+main.theme-2 > #calculator-keypad > #calculator-keys-list > #reset-key, main.theme-2 > #calculator-keypad > #calculator-keys-list > #delete-key {
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0 0.25rem hsl(185, 58%, 25%);
+}
+
+main.theme-2 > #calculator-keypad > #calculator-keys-list > #enter-key {
+  background-color: hsl(25, 98%, 40%);
+  box-shadow: 0 0.25rem hsl(25, 99%, 27%);
+}
+/* Theme-3 */
+body.theme-3 {
+  background:  hsl(268, 75%, 9%);
+  color: hsl(52, 100%, 62%);
+}
+
+header.theme-3 > #theme-div > #theme-selector > div, main.theme-3 > #calculator-keypad, main.theme-3 > #calculator-result {
+  background-color: hsl(268, 71%, 12%);
+}
+
+header.theme-3 > #theme-div > #theme-selector > div > .theme-toggle-btn {
+  background-color: hsl(176, 100%, 44%);
+}
+
+main.theme-3 > #calculator-keypad > #calculator-keys-list > .calculator-key {
+  color: hsl(52, 100%, 62%);
+  background-color: hsl(268, 47%, 21%);
+  box-shadow: 0 0.25rem hsl(290, 70%, 36%);
+}
+
+main.theme-3 > #calculator-keypad > #calculator-keys-list > #enter-key, main.theme-3 > #calculator-keypad > #calculator-keys-list > #delete-key, main.theme-3 > #calculator-keypad > #calculator-keys-list > #reset-key {
+  color: hsl(0, 0%, 100%);
+}
+
+main.theme-3 > #calculator-keypad > #calculator-keys-list > #reset-key, main.theme-3 > #calculator-keypad > #calculator-keys-list > #delete-key {
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: 0 0.25rem hsl(285, 91%, 52%);
+}
+
+main.theme-3 > #calculator-keypad > #calculator-keys-list > #enter-key {
+  color: hsl(198, 20%, 13%);
+  background-color: hsl(176, 100%, 44%);
+  box-shadow: 0 0.25rem hsl(177, 92%, 70%);
 }
