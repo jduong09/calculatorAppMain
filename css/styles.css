@@ -222,3 +222,50 @@ main.theme-3 > #calculator-keypad > #calculator-keys-list > #enter-key {
   background-color: hsl(176, 100%, 44%);
   box-shadow: 0 0.25rem hsl(177, 92%, 70%);
 }
+
+/* Media Query: 576px */
+@media (min-width: 575px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  header, main {
+    width: 60%;
+  }
+}
+
+@media (min-width: 765px) {
+  header, main {
+    width: 50%;
+  }
+}
+
+@media (min-width: 922px) {
+  header, main {
+    width: 35%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .calculator-key {
+    padding: .75rem 1.5rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  header, main {
+    width: 30%;
+  }
+
+  #calculator-result {
+    padding: 2rem;
+  }
+
+  .calculator-key {
+    padding: .5rem .25rem;
+  }
+}
